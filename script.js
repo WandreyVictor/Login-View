@@ -70,5 +70,8 @@ const init = () => {
         })
     }
 }
-
+function redirectToRegister(event){
+    event.preventDefault()
+   window.location = "/cadastro.html"
+}
 window.onload = init; 

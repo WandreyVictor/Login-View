@@ -6,20 +6,24 @@
     <link rel="stylesheet" href="default.css">
     <link rel="stylesheet" href="style.css">
     <script defer src="./script.js"></script>
-    <title>Login</title>
+    <title>Cadastro</title>
 </head>
 <body>
     <main class="form">
 <div class="form_container">
-<h1 class="form_title">Login</h1>
+<h1 class="form_title">Cadastrar</h1>
 <form class="form_form">
+    <input class="form_input" type="name" placeholder="nome completo">
+    <span class="form_input-border"></span>
     <input class="form_input" type="email" placeholder="e-mail">
     <span class="form_input-border"></span>
     <input class="form_input" type="password" placeholder="senha">
     <span class="form_input-border"></span>
-    <button class="form_submit">Login</button>
-    <button class="form_submit" onclick="redirectToRegister(event)">Não possuo cadastro</button>
-    <a class="form_reset" href="a">Esqueci a Senha?</a>
+    <input class="form_input" type="birth_date" placeholder="data de nacimento">
+    <span class="form_input-border"></span>
+    <button class="form_submit">Cadastrar</button>
+    <a class="form_reset" href="/index.html">Já sou Cadastrado?</a>
+
 </form>
 </div>
     </main>
