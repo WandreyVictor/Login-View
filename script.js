@@ -1,3 +1,22 @@
+import{ cadastroView}from "./components/cadastro-view.js"
+import { loginView } from "./components/login-view.js";
+
+document.addEventListener('DOMContentLoaded',() =>{
+    let main = document.getElementById("main")
+    main.innerHTML = loginView()
+
+    document.getElementById("btncadastro").addEventListener("click",(event) =>{
+        event.preventDefault()
+        main.innerHTML = cadastroView()
+
+        document.getElementById("possuocadastro").addEventListener("click",(event) =>{
+            main.innerHTML = loginView()
+        })
+    })
+
+   
+})
+
 const init = () => {
     const validateEmail = (event) =>{
         const input = event.currentTarget;
@@ -27,7 +46,7 @@ const init = () => {
 
     const inputEmail = document.querySelector('input[type="email"]');
     const inputPassword = document.querySelector('input[type="password"]');
-    const submitButton = document.querySelector('.login_submit');
+    const submitButton = document.querySelector('.form_submit');
 
     inputEmail.addEventListener('input', validateEmail);
     inputPassword.addEventListener('input', validatePassword);
