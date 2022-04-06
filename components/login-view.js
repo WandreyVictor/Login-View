@@ -12,7 +12,7 @@ return `
         <button id="btncadastro" class="form_submit">Não possuo cadastro</button>
         <a class="form_reset" href="a">Esqueci a Senha?</a>
     </form>
-    </div>
+    </div> 
     
 </section>`;
 }
