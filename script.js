@@ -25,10 +25,10 @@ const init = () => {
 
         if(!emailTest) {
             submitButton.setAttribute('disabled', 'disabled');
-            input.nextElementSbling.classList.add('error');
+            input.nextElementSibling.classList.add('error');
         } else {
             submitButton.removeAttribute('disabled');
-            input.nextElementSbling.classList.remove('error');
+            input.nextElementSibling.classList.remove('error');
         }
     }
 
