@@ -1,36 +1,12 @@
-import{ cadastroView}from "./components/cadastro-view.js"
-import { loginView } from "./components/login-view.js";
+import { loginView } from "./components/login-form/login-view.js";
 
 document.addEventListener('DOMContentLoaded',() =>{
+    
     let main = document.getElementById("main")
     main.innerHTML = loginView()
-
-    document.getElementById("btncadastro").addEventListener("click",(event) =>{
-        event.preventDefault()
-        main.innerHTML = cadastroView()
-
-        document.getElementById("possuocadastro").addEventListener("click",(event) =>{
-            main.innerHTML = loginView()
-        })
-    })
-
-   
 })
 
 const init = () => {
-    const validateEmail = (event) =>{
-        const input = event.currentTarget;
-        const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-        const emailTest = regex.test(input.value);
-
-        if(!emailTest) {
-            submitButton.setAttribute('disabled', 'disabled');
-            input.nextElementSibling.classList.add('error');
-        } else {
-            submitButton.removeAttribute('disabled');
-            input.nextElementSibling.classList.remove('error');
-        }
-    }
 
     const validatePassword = (event) => {
         const input = event.currentTarget;
@@ -88,9 +64,5 @@ const init = () => {
             })
         })
     }
-}
-function redirectToRegister(event){
-    event.preventDefault()
-   window.location = "/cadastro.html"
 }
 window.onload = init; 
