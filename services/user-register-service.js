@@ -12,7 +12,7 @@ export const registerUser = (body) => {
         submitButton.classList.add('success');
         submitButton.textContent = "Sent! :)";
     }
-
+    
     fetch('http://localhost:8080/api/v1/user', {
         method: 'POST',
         headers: {
@@ -20,12 +20,16 @@ export const registerUser = (body) => {
         },
         body: JSON.stringify(body)
     }).then((response) => {
-        console.log(response)
-       if (response.status !== 200) {
+        response = response.json();
+        console.log(response);
+        if (response.status !== 200) {
            return errorHandler();
        }
        successHandler();
-    }).catch(() => {
+    }).catch((response) => {
+        response = response.json();
+        console.log(response);
+        console.log(response,x,y,z)
         errorHandler();
     })
 }
