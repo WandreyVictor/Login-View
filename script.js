@@ -8,25 +8,6 @@ document.addEventListener('DOMContentLoaded',() =>{
 
 const init = () => {
 
-    const validatePassword = (event) => {
-        const input = event.currentTarget;
-
-        if(input.value.length < 8) {
-            submitButton.setAttribute("disabled", "disabled");
-            input.nextElementSbling.classList.add('error');
-        } else{
-            submitButton.removeAttribute("disabled");
-            input.nextElementSbling.classList.remove("error");
-        }
-    }
-
-    const inputEmail = document.querySelector('input[type="email"]');
-    const inputPassword = document.querySelector('input[type="password"]');
-    const submitButton = document.querySelector('.form_submit');
-
-    inputEmail.addEventListener('input', validateEmail);
-    inputPassword.addEventListener('input', validatePassword);
-
     const errorHandler = () => {
         submitButton.classList.remove('success');
         submitButton.classList.add('error');

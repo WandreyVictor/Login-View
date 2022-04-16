@@ -9,7 +9,7 @@ return `
     <form class="form_form">
         <input class="form_input" type="email" placeholder="e-mail" onkeyup="loginController.emailValid(event)">
         <span class="form_input-border"></span>
-        <input class="form_input" type="password" placeholder="senha">
+        <input class="form_input" type="password" placeholder="senha" onkeyup="loginController.validatePassword(event)">
         <span class="form_input-border"></span>
         <button class="form_submit">Login</button>
         <button id="btncadastro" class="form_submit" onclick="loginController.toRegister(event)">Não possuo cadastro</button>

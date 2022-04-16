@@ -3,8 +3,7 @@ export const registerUser = (body) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Accept':'*/*',
-            'Connection':'keep-alive'
+            'No-Cors':""
         },
         body: JSON.stringify(body)
     }).then((response) => {

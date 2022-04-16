@@ -9,9 +9,9 @@ function cadastroView(){
         <form class="form_form">
             <input id="regName" class="form_input" type="name" placeholder="nome completo">
             <span class="form_input-border"></span>
-            <input id="regEmail"class="form_input" type="email" placeholder="e-mail">
+            <input id="regEmail"class="form_input" type="email" placeholder="e-mail" onkeyup="cadastroController.emailValid(event)">
             <span class="form_input-border"></span>
-            <input id="regPassword"class="form_input" type="password" placeholder="senha">
+            <input id="regPassword"class="form_input" type="password" placeholder="senha" onkeyup="cadastroController.validatePassword(event)">
             <span class="form_input-border"></span>
             <input id="regBirthDate"class="form_input" type="date" name="birth_date" placeholder="data de nacimento">
             <span class="form_input-border"></span>
